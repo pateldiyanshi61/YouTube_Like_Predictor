@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube-Like Predictor</title>
+    <style>
+        body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+       }
+
+        header{
+            background-color: #ff0000; 
+            color: white;
+            text-align: center;
+            padding: 30px; 
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .bgimg{
+            background-image: url('/static/images/redwhite.png');
+            
+
+        }
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #3f3f3f;
+            color: white;
+            text-align: right;
+            font-size: 18px;
+            padding: 10px;
+            margin-bottom: 0px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+        }
+        
+        main {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .search-form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            padding: 10px;
+            width: 80%;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: #ff0000; /* YouTube red color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #ff0000; 
+            color: white;
+            text-align: center;
+            padding: 1px; 
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            color: #333; 
+            margin-bottom: 10px;
+        }
+
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #666; 
+        }
+
+        li span {
+            font-weight: bold;
+            color: #000; 
+        }
+
+        .output {
+            max-width: 400px; 
+            margin: 0 auto;
+            height: 250px;
+            padding: 70px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            border-radius: 10px; 
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        button:hover {
+            background-color: #3f3f3f;
+        }
+    </style> 
+</head>
+<body >
+    <header>
+        <h1>YouTube-Like Predictor</h1>
+    </header>
+    <div class="bgimg">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>Welcome to the YouTube-like Predictor web page. Here, you can download the video details of YouTube Channel!</p>
+        <form class="search-form" action="#" method="post">
+            <input class="search-input" type="text" placeholder="Enter YouTube Channel Name" name="channel_name"name id="channel_name" for="channel_name"required>
+            <button class="search-button" type="submit">Download CSV</button>
+        </form>
+
+        <section class="output">
+            <div>
+                {% if download_link %}
+            <p>{{ download_link }}</p>
+            {% endif %}
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 YouTube-like Predictor. All rights reserved.<br>&#8226; Disclaimer</p>
+    </footer>
+    </div>
+</body>
+</html> 
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube-like Predictor</title>
+    <style>
+        body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+       }
+
+        header{
+            background-color: #ff0000; 
+            color: white;
+            text-align: center;
+            padding: 30px; 
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .bgimg{
+            background-image: url('/static/images/redwhite.png');
+            
+
+        }
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #3f3f3f;
+            color: white;
+            text-align: right;
+            font-size: 18px;
+            padding: 10px;
+            margin-bottom: 0px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+        }
+        
+        main {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .search-form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            padding: 10px;
+            width: 80%;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            background-color: #ff0000; /* YouTube red color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #ff0000; 
+            color: white;
+            text-align: center;
+            padding: 1px; 
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            color: #333; 
+            margin-bottom: 10px;
+        }
+
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #666; 
+        }
+
+        li span {
+            font-weight: bold;
+            color: #000; 
+        }
+
+        .output {
+            max-width: 400px; 
+            margin: 0 auto;
+            height: 250px;
+            padding: 70px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            border-radius: 10px; 
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        button:hover {
+            background-color: #3f3f3f;
+        }
+    </style> 
+</head>
+<body >
+    <header>
+        <h1>YouTube-like Predictor</h1>
+    </header>
+    <div class="bgimg">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>Welcome to the YouTube-like Predictor web page. Here, you can download the video details of YouTube Channel!</p>
+        <form class="search-form" action="#" method="post">
+            <input class="search-input" type="text" placeholder="Enter YouTube Channel Name" name="channel_name"name id="channel_name" for="channel_name"required>
+            <button class="search-button" type="submit">Download CSV</button>
+        </form>
+
+        <section class="output">
+            <div>
+                {% if download_link %}
+            <p>{{ download_link }}</p>
+            {% endif %}
+            </div>
+        </section>
+
+        <h1>Your Data Visualization</h1>
+    <img src="data:image/png;base64,'static/plot.png'" alt="Plot">
+    
+    </main>
+    <footer>
+        <p>&copy; 2023 YouTube-like Predictor. All rights reserved.<br>&#8226; Disclaimer</p>
+    </footer>
+    </div>
+</body>
+</html>-->

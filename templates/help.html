@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube-Like Predictor</title>
+    <style>
+        body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+       }
+
+        header{
+            background-color: #ff0000; /* YouTube red color */
+            color: white;
+            text-align: center;
+            padding: 30px; /* Adjust padding to your preference */
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .bgimg{
+            background-image: url('/static/images/redwhite1.png');
+            height: 700px;
+        
+
+        }
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #3f3f3f;
+            color: white;
+            text-align: right;
+            font-size: 18px;
+            padding: 10px;
+            margin-bottom: 0px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+        }
+        
+        main {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #ff0000; /* YouTube red color */
+            color: white;
+            text-align: center;
+            padding: 1px; /* Adjust padding to your preference */
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        h2 {
+            font-size: 24px;
+            color: #333; 
+            margin-bottom: 10px;
+        }
+
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #666; 
+        }
+
+        li span {
+            font-weight: bold;
+            color: #000; 
+        }
+
+        .output {
+            max-width: 600px; /* Adjust the maximum width to your preference */
+            margin: 0 auto;
+            height: 500px;
+            padding: 60px;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            border-radius: 10px; /* Add a border radius for a cleaner look */
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        button:hover {
+            background-color: #3f3f3f;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>YouTube-Like Predictor</h1>
+    </header>
+    <!--<div class="bgimg">-->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
+    </nav>
+    <main class="bgimg">
+        <section class="output">
+        <!-- <p >"Welcome to our YouTube-like Predictor! We're here to make your video watching experience 
+            even more enjoyable. Our smart recommendation system analyzes your viewing history, likes, and 
+            preferences to suggest videos you're likely to love. Discover new content that aligns with your 
+            interests and passions effortlessly. Whether you're into educational tutorials, music, gaming, 
+            or lifestyle vlogs, our goal is to curate a personalized feed just for you. Sit back, relax, and 
+            let our algorithm do the work. Explore fresh content that keeps you engaged and entertained. We're 
+            committed to respecting your privacy and continuously improving our recommendations based on your 
+            feedback. Start exploring, and let's make your video journey more exciting!"</p> -->
+            <h1>Help</h1>
+            <p>Welcome to our application help page. Here, you can find information and guidance on how to use our services and get the most out of the application.</p>
+            
+            <h2>Getting Started</h2>
+            <p>If you're new to our application, here are some steps to get you started:</p>
+            <ol>
+                <li>Visit the home page to explore the main features.</li>
+                <li>Use the 'Get Statistics' to retrieve channel statistics by entering a channel name.</li>
+                <li>Go to the 'Get Video Detail' to download video details by specifying a channel name.</li>
+                <li>Visit the 'Get Prediction' to make predictions based on views and comments.</li>
+            </ol>
+            <h2>About</h2>
+            <p>Learn more about our application and its purpose on the <a href="/about" style="color: #000;">About page</a>.</p>
+            
+            <h2>Feedback</h2>
+            <p>If you have any suggestions, questions, or feedback, please don't hesitate to <a href="/feedback" style="color: #000;">contact us</a>.</p>
+        </section>
+    </main>
+    
+    <!--</div>-->
+    <footer>
+        <p>&copy; 2023 YouTube-like Predictor. All rights reserved.<br>&#8226; Disclaimer</p>
+    </footer>
+</body>
+</html>
